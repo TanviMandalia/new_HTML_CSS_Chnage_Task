@@ -1,68 +1,59 @@
-/* =========================================================
-   INITIAL RISK RATING REPORT — DESIGNER EDITION
-   Theme: Modern Financial Intelligence · Vibrant & Structured
-   Colors: Deep Indigo · Vivid Teal · Coral Risk · Amber Alert
-   ========================================================= */
-
 /* ── CSS Variables ── */
 :root {
     /* Brand Indigo */
-    --indigo-900:  #1a1150;
-    --indigo-800:  #231a6b;
-    --indigo-700:  #2d2388;
-    --indigo-500:  #4a3fcf;
-    --indigo-200:  #c5c1f4;
-    --indigo-50:   #f0effc;
+    --indigo-900: #1a1150;
+    --indigo-800: #231a6b;
+    --indigo-700: #2d2388;
+    --indigo-500: #4a3fcf;
+    --indigo-200: #c5c1f4;
+    --indigo-50: #f0effc;
 
     /* Vivid Teal */
-    --teal-700:    #0b7285;
-    --teal-500:    #0f9cb3;
-    --teal-300:    #66d9e8;
-    --teal-50:     #e3f9fc;
+    --teal-700: #0b7285;
+    --teal-500: #0f9cb3;
+    --teal-300: #66d9e8;
+    --teal-50: #e3f9fc;
 
     /* Coral / High Risk */
-    --coral-800:   #b5192a;
-    --coral-600:   #e0253a;
-    --coral-100:   #fde8ea;
-    --coral-50:    #fff5f6;
+    --coral-800: #b5192a;
+    --coral-600: #e0253a;
+    --coral-100: #fde8ea;
+    --coral-50: #fff5f6;
 
     /* Amber / Warning */
-    --amber-700:   #b45309;
-    --amber-400:   #fbbf24;
-    --amber-50:    #fffbeb;
+    --amber-700: #b45309;
+    --amber-400: #fbbf24;
+    --amber-50: #fffbeb;
 
     /* Emerald / Open/Active */
     --emerald-700: #065f46;
     --emerald-400: #34d399;
-    --emerald-50:  #ecfdf5;
+    --emerald-50: #ecfdf5;
 
     /* Neutral */
-    --ink-900:     #111827;
-    --ink-700:     #374151;
-    --ink-500:     #6b7280;
-    --ink-300:     #d1d5db;
-    --ink-100:     #f3f4f6;
-    --ink-50:      #f9fafb;
-    --white:       #ffffff;
+    --ink-900: #111827;
+    --ink-700: #374151;
+    --ink-500: #6b7280;
+    --ink-300: #d1d5db;
+    --ink-100: #f3f4f6;
+    --ink-50: #f9fafb;
+    --white: #ffffff;
 
     /* Borders */
-    --border:      #e2e8f0;
-    --border-mid:  #cbd5e1;
+    --border: #e2e8f0;
+    --border-mid: #cbd5e1;
 
     /* Radii */
-    --r-sm:  4px;
-    --r-md:  8px;
-    --r-lg:  12px;
-    --r-pill:20px;
+    --r-sm: 4px;
+    --r-md: 8px;
+    --r-lg: 12px;
+    --r-pill: 20px;
 
     /* Shadows */
-    --shadow-sm:  0 1px 3px rgba(26,17,80,0.08), 0 0 0 1px rgba(26,17,80,0.04);
-    --shadow-md:  0 4px 12px rgba(26,17,80,0.10), 0 0 0 1px rgba(26,17,80,0.05);
+    --shadow-sm: 0 1px 3px rgba(26, 17, 80, 0.08), 0 0 0 1px rgba(26, 17, 80, 0.04);
+    --shadow-md: 0 4px 12px rgba(26, 17, 80, 0.10), 0 0 0 1px rgba(26, 17, 80, 0.05);
 }
 
-/* =========================================================
-   BASE
-   ========================================================= */
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 10px;
@@ -73,8 +64,15 @@ body {
     background: var(--white);
 }
 
-table { width: 100%; border-collapse: collapse; }
-td, th { vertical-align: top; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    vertical-align: top;
+}
 
 /* =========================================================
    @PAGE — FULL PRINT SETUP
@@ -85,19 +83,14 @@ td, th { vertical-align: top; }
    ========================================================= */
 @page {
     size: A4;
-    /* top: 20mm (header ~14mm + 6mm gap below it)
-       right/left: 6mm
-       bottom: 18mm — big enough for the 120px-wide logo (~10mm tall)
-                      plus a 4mm gap below it to the paper edge        */
     margin: 20mm 6mm 18mm 6mm;
 
-    /* ── Running header (repeats every page) ── */
     @top-center {
         content: element(page-header-running);
         vertical-align: bottom;
     }
 
-    /* ── Footer: left — CONFIDENTIAL badge ── */
+
     @bottom-left {
         content: "● CONFIDENTIAL";
         font-family: Helvetica, Arial, sans-serif;
@@ -108,13 +101,11 @@ td, th { vertical-align: top; }
         vertical-align: middle;
     }
 
-    /* ── Footer: center — Trackwizz logo (running element) ── */
     @bottom-center {
         content: element(footer-logo-running);
         vertical-align: middle;
     }
 
-    /* ── Footer: right — page counter ── */
     @bottom-right {
         content: "Page " counter(page) " of " counter(pages);
         font-family: Helvetica, Arial, sans-serif;
@@ -124,14 +115,11 @@ td, th { vertical-align: top; }
     }
 }
 
-/* ── All pages share the same margin ── */
 @page :first {
     margin-top: 20mm;
 }
 
-/* =========================================================
-   PAGE HEADER  (running element — appears on every page)
-   ========================================================= */
+
 .page-header {
     position: running(page-header-running);
     padding-top: 6px;
@@ -140,9 +128,13 @@ td, th { vertical-align: top; }
     background: var(--white);
 }
 
-.page-header td { padding-bottom: 7px; }
+.page-header td {
+    padding-bottom: 7px;
+}
 
-.page-header .hdr-left { width: 62%; }
+.page-header .hdr-left {
+    width: 62%;
+}
 
 .page-header .hdr-user {
     font-size: 15px;
@@ -164,7 +156,10 @@ td, th { vertical-align: top; }
     vertical-align: middle;
 }
 
-.header-logo { width: 170px; height: auto; }
+.header-logo {
+    width: 170px;
+    height: auto;
+}
 
 /* ── Footer logo running element ──
    The @bottom-center margin box renders this element.
@@ -177,6 +172,7 @@ td, th { vertical-align: top; }
     padding: 0;
     margin: 0;
 }
+
 .footer-logo {
     width: 110px;
     height: auto;
@@ -184,9 +180,6 @@ td, th { vertical-align: top; }
     margin: 0 auto;
 }
 
-/* =========================================================
-   TITLE BAR
-   ========================================================= */
 .title-bar {
     margin: 12px 0 14px;
     background: linear-gradient(100deg, var(--indigo-900) 0%, var(--indigo-700) 55%, var(--teal-700) 100%);
@@ -208,15 +201,13 @@ td, th { vertical-align: top; }
 
 .title-bar .t-meta {
     font-size: 9px;
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
     font-style: italic;
     width: 22%;
     letter-spacing: 0.04em;
 }
 
-/* =========================================================
-   CUSTOMER CARD
-   ========================================================= */
+
 .customer-card {
     border: 1.5px solid var(--border);
     border-radius: var(--r-lg);
@@ -228,19 +219,26 @@ td, th { vertical-align: top; }
     position: relative;
 }
 
-/* Decorative right-corner accent */
 .customer-card::after {
     content: '';
     display: block;
     position: absolute;
-    top: 0; right: 0;
-    width: 60px; height: 60px;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, transparent 50%, var(--indigo-50) 50%);
     border-top-right-radius: var(--r-lg);
 }
 
-.customer-card .cc-left { width: 55%; }
-.customer-card .cc-right { width: 45%; text-align: center; }
+.customer-card .cc-left {
+    width: 55%;
+}
+
+.customer-card .cc-right {
+    width: 45%;
+    text-align: center;
+}
 
 .customer-id {
     font-size: 10px;
@@ -259,8 +257,9 @@ td, th { vertical-align: top; }
     line-height: 1.2;
 }
 
-/* ── High Risk Pill ── */
-.risk-pill-wrap { margin-top: 11px; }
+.risk-pill-wrap {
+    margin-top: 11px;
+}
 
 .risk-pill {
     display: inline-flex;
@@ -273,17 +272,41 @@ td, th { vertical-align: top; }
     font-weight: bold;
     font-size: 11px;
     letter-spacing: 0.03em;
-    box-shadow: 0 2px 8px rgba(224,37,58,0.35);
+    box-shadow: 0 2px 8px rgba(224, 37, 58, 0.35);
 }
 
-.risk-img   { width: 16px; height: 16px; display: inline-block; vertical-align: middle; }
-.speedometer-img { width: 215px; height: auto; }
-.arrow_right_img     { width: 14px; height: auto; }
-.arrow_right_ch_img  { width: 14px; height: auto; }
-.arrow_upper_img     { width: 14px; height: auto; }
-.case_history_img    { width: 16px; height: 16px; }
+.risk-img {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
 
-/* ── Condition Box ── */
+.speedometer-img {
+    width: 215px;
+    height: auto;
+}
+
+.arrow_right_img {
+    width: 14px;
+    height: auto;
+}
+
+.arrow_right_ch_img {
+    width: 14px;
+    height: auto;
+}
+
+.arrow_upper_img {
+    width: 14px;
+    height: auto;
+}
+
+.case_history_img {
+    width: 16px;
+    height: 16px;
+}
+
 .condition-box {
     display: inline-grid;
     gap: 5px;
@@ -315,9 +338,6 @@ td, th { vertical-align: top; }
     letter-spacing: 0.02em;
 }
 
-/* =========================================================
-   STATUS BAR
-   ========================================================= */
 .status-bar {
     border: 1.5px solid var(--border);
     border-radius: var(--r-md);
@@ -327,8 +347,14 @@ td, th { vertical-align: top; }
     overflow: hidden;
 }
 
-.status-bar td { width: 50%; padding: 9px 18px; }
-.status-bar td.divider { border-left: 1.5px solid var(--border); }
+.status-bar td {
+    width: 50%;
+    padding: 9px 18px;
+}
+
+.status-bar td.divider {
+    border-left: 1.5px solid var(--border);
+}
 
 .status-label {
     font-size: 10px;
@@ -350,9 +376,7 @@ td, th { vertical-align: top; }
     letter-spacing: 0.05em;
 }
 
-/* =========================================================
-   FACTORS TABLE
-   ========================================================= */
+
 .factors-card {
     border: 1.5px solid var(--border);
     border-radius: var(--r-lg);
@@ -369,7 +393,7 @@ td, th { vertical-align: top; }
     padding: 11px 18px;
     font-weight: bold;
     font-size: 10px;
-    color: rgba(255,255,255,0.90);
+    color: rgba(255, 255, 255, 0.90);
     text-transform: uppercase;
     letter-spacing: 0.09em;
 }
@@ -380,25 +404,54 @@ td, th { vertical-align: top; }
     font-size: 10px;
 }
 
-/* Alternating stripe */
-.factor-row:nth-child(odd) td  { background: var(--white); }
-.factor-row:nth-child(even) td { background: var(--indigo-50); }
+.factor-row:nth-child(odd) td {
+    background: var(--white);
+}
+
+.factor-row:nth-child(even) td {
+    background: var(--indigo-50);
+}
 
 .factor-row .col-name {
     font-weight: bold;
     color: var(--indigo-800);
 }
 
-.col-name   { width: 30%; padding-left: 18px; }
-.col-weight { width: 8%;  color: var(--ink-500); font-weight: 600; }
-.col-attr   { width: 22%; font-weight: bold; color: var(--teal-700); }
-.col-arrow  { width: 4%; }
-.col-value  { width: 26%; color: var(--ink-700); }
-.col-score  { width: 10%; text-align: center; }
+.col-name {
+    width: 30%;
+    padding-left: 18px;
+}
+
+.col-weight {
+    width: 8%;
+    color: var(--ink-500);
+    font-weight: 600;
+}
+
+.col-attr {
+    width: 22%;
+    font-weight: bold;
+    color: var(--teal-700);
+}
+
+.col-arrow {
+    width: 4%;
+}
+
+.col-value {
+    width: 26%;
+    color: var(--ink-700);
+}
+
+.col-score {
+    width: 10%;
+    text-align: center;
+}
 
 .bullet {
     display: inline-block;
-    width: 6px; height: 6px;
+    width: 6px;
+    height: 6px;
     background: var(--indigo-500);
     border-radius: 50%;
     margin-right: 8px;
@@ -406,7 +459,10 @@ td, th { vertical-align: top; }
     transform: translateY(1px);
 }
 
-.arrow-right { display: inline-block; vertical-align: middle; }
+.arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+}
 
 .score-pill {
     display: inline-block;
@@ -432,21 +488,18 @@ td, th { vertical-align: top; }
 
 .factor-total .label-light {
     font-weight: 400;
-    color: rgba(255,255,255,0.70);
+    color: rgba(255, 255, 255, 0.70);
 }
 
-/* Score pill inside total row — inverted style */
 .factor-total .score-pill {
-    border-color: rgba(255,255,255,0.60);
+    border-color: rgba(255, 255, 255, 0.60);
     color: var(--white);
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     font-size: 10px;
     padding: 3px 14px;
 }
 
-/* =========================================================
-   KYC BANNER
-   ========================================================= */
+
 .kyc-banner {
     background: linear-gradient(90deg, var(--teal-700) 0%, var(--teal-500) 100%);
     border-radius: var(--r-md) var(--r-md) 0 0;
@@ -460,9 +513,6 @@ td, th { vertical-align: top; }
     letter-spacing: 0.10em;
 }
 
-/* =========================================================
-   KYC FULL-WIDTH SECTIONS
-   ========================================================= */
 .kyc-full {
     border: 1.5px solid var(--border);
     border-radius: var(--r-md);
@@ -473,9 +523,6 @@ td, th { vertical-align: top; }
     border-left: 4px solid var(--teal-500);
 }
 
-/* =========================================================
-   KYC GRID
-   ========================================================= */
 .kyc-grid {
     border-collapse: separate;
     border-spacing: 0;
@@ -490,18 +537,33 @@ td, th { vertical-align: top; }
     background: var(--white);
 }
 
-/* Corner rounding on outer cells */
-.kyc-grid tr:first-child td:first-child { border-top-left-radius:     var(--r-md); }
-.kyc-grid tr:first-child td:last-child  { border-top-right-radius:    var(--r-md); }
-.kyc-grid tr:last-child  td:first-child { border-bottom-left-radius:  var(--r-md); }
-.kyc-grid tr:last-child  td:last-child  { border-bottom-right-radius: var(--r-md); }
+.kyc-grid tr:first-child td:first-child {
+    border-top-left-radius: var(--r-md);
+}
 
-/* Subtle teal top-accent on every KYC cell */
-.kyc-cell { border-top: 3px solid var(--teal-300); }
-.kyc-cell:first-child { border-top: 3px solid var(--teal-300); }
+.kyc-grid tr:first-child td:last-child {
+    border-top-right-radius: var(--r-md);
+}
 
-/* Alert cells get coral top-accent */
-.kyc-cell:has(.kyc-section-title.alert) { border-top: 3px solid var(--coral-600); }
+.kyc-grid tr:last-child td:first-child {
+    border-bottom-left-radius: var(--r-md);
+}
+
+.kyc-grid tr:last-child td:last-child {
+    border-bottom-right-radius: var(--r-md);
+}
+
+.kyc-cell {
+    border-top: 3px solid var(--teal-300);
+}
+
+.kyc-cell:first-child {
+    border-top: 3px solid var(--teal-300);
+}
+
+.kyc-cell:has(.kyc-section-title.alert) {
+    border-top: 3px solid var(--coral-600);
+}
 
 .kyc-section-title {
     font-weight: bold;
@@ -512,18 +574,23 @@ td, th { vertical-align: top; }
     letter-spacing: 0.06em;
 }
 
-.kyc-section-title.alert { color: var(--coral-800); }
+.kyc-section-title.alert {
+    color: var(--coral-800);
+}
 
 .section-icon {
     display: inline-block;
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     border: 1.5px solid var(--teal-500);
     margin-right: 6px;
     vertical-align: middle;
     border-radius: 2px;
 }
 
-.kyc-section-title.alert .section-icon { border-color: var(--coral-600); }
+.kyc-section-title.alert .section-icon {
+    border-color: var(--coral-600);
+}
 
 .kyc-field {
     font-size: 9.5px;
@@ -531,13 +598,21 @@ td, th { vertical-align: top; }
     line-height: 1.5;
 }
 
-.kyc-label { font-weight: bold; color: var(--ink-700); }
-.kyc-value { color: var(--ink-500); }
-.kyc-value.alert { color: var(--coral-800); font-weight: bold; }
+.kyc-label {
+    font-weight: bold;
+    color: var(--ink-700);
+}
 
-/* =========================================================
-   RISK PROFILE BAR
-   ========================================================= */
+.kyc-value {
+    color: var(--ink-500);
+}
+
+.kyc-value.alert {
+    color: var(--coral-800);
+    font-weight: bold;
+}
+
+
 .risk-profile-bar {
     background: linear-gradient(90deg, var(--indigo-50) 0%, var(--teal-50) 100%);
     border: 1.5px solid var(--indigo-200);
@@ -557,9 +632,6 @@ td, th { vertical-align: top; }
     color: var(--ink-700);
 }
 
-/* =========================================================
-   CASE HISTORY
-   ========================================================= */
 .case-banner {
     border: 1.5px solid var(--border);
     border-radius: var(--r-lg);
@@ -584,7 +656,8 @@ td, th { vertical-align: top; }
 }
 
 .case-banner-title img {
-    width: 16px; height: 16px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -598,14 +671,39 @@ td, th { vertical-align: top; }
     border-left: 4px solid var(--indigo-500);
 }
 
-.case-entry table { table-layout: fixed; width: 100%; }
-.case-entry td    { vertical-align: middle; }
+.case-entry table {
+    table-layout: fixed;
+    width: 100%;
+}
 
-.arrow-col           { width: 5%; }
-.case-info           { width: 50%; }
-.case-stage-col      { width: 10%; text-align: right; padding-right: 6px; }
-.case-stage-arrow-col{ width: 5%;  text-align: center; }
-.case-stage-pill-col { width: 30%; text-align: left;  padding-left: 6px; }
+.case-entry td {
+    vertical-align: middle;
+}
+
+.arrow-col {
+    width: 5%;
+}
+
+.case-info {
+    width: 50%;
+}
+
+.case-stage-col {
+    width: 10%;
+    text-align: right;
+    padding-right: 6px;
+}
+
+.case-stage-arrow-col {
+    width: 5%;
+    text-align: center;
+}
+
+.case-stage-pill-col {
+    width: 30%;
+    text-align: left;
+    padding-left: 6px;
+}
 
 .case-date {
     color: var(--indigo-500);
@@ -646,12 +744,9 @@ td, th { vertical-align: top; }
 .stage-pill.open {
     background: var(--emerald-700);
     color: var(--white);
-    box-shadow: 0 2px 6px rgba(6,95,70,0.30);
+    box-shadow: 0 2px 6px rgba(6, 95, 70, 0.30);
 }
 
-/* =========================================================
-   PAGE-BREAK CONTROLS
-   ========================================================= */
 .customer-card,
 .condition-box,
 .status-bar,
@@ -664,21 +759,70 @@ td, th { vertical-align: top; }
     page-break-inside: avoid;
 }
 
-.kyc-grid tr { page-break-inside: avoid; }
+.kyc-grid tr {
+    page-break-inside: avoid;
+}
 
-.kyc-banner      { page-break-after: avoid; }
-.case-banner-title { page-break-after: avoid; }
+.kyc-banner {
+    page-break-after: avoid;
+}
 
-.page-break { page-break-before: always; }
+.case-banner-title {
+    page-break-after: avoid;
+}
+
+.page-break {
+    page-break-before: always;
+}
 
 .pdf-footer {
-    position: fixed; bottom: 0; left: 0; right: 0; height: 12mm;
-    display: table; width: 100%; padding: 0 6mm; box-sizing: border-box;
-    border-top: 2px solid #2d2388; background: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12mm;
+    display: table;
+    width: 100%;
+    padding: 0 6mm;
+    box-sizing: border-box;
+    border-top: 2px solid #2d2388;
+    background: #ffffff;
     font-family: Helvetica, Arial, sans-serif;
 }
-.pdf-footer .f-left  { display: table-cell; width: 33%; vertical-align: middle; font-size: 8px; font-weight: bold; letter-spacing: 0.10em; color: #e0253a; }
-.pdf-footer .f-mid   { display: table-cell; width: 34%; vertical-align: middle; text-align: center; }
-.pdf-footer .f-right { display: table-cell; width: 33%; vertical-align: middle; text-align: right; font-size: 8px; color: #6b7280; }
-.pdf-footer .footer-logo-img { height: 18px; width: auto; display: inline-block; vertical-align: middle; }
-.footer-logo-wrap { display: none; }
+
+.pdf-footer .f-left {
+    display: table-cell;
+    width: 33%;
+    vertical-align: middle;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 0.10em;
+    color: #e0253a;
+}
+
+.pdf-footer .f-mid {
+    display: table-cell;
+    width: 34%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.pdf-footer .f-right {
+    display: table-cell;
+    width: 33%;
+    vertical-align: middle;
+    text-align: right;
+    font-size: 8px;
+    color: #6b7280;
+}
+
+.pdf-footer .footer-logo-img {
+    height: 18px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-logo-wrap {
+    display: none;
+}
