@@ -7,15 +7,13 @@
     <style type="text/css">
         body {
             font-family: Helvetica, Arial, sans-serif;
-            font-size: 10px;
-            color: var(--ink-900);
-            margin: 0;
+            font-size: 12px;
+            color: #111827;
+            margin: 15px;
             padding: 0;
             line-height: 1.5;
-            background: var(--white);
+            background: #ffffff;
         }
-
-
 
         table {
             width: 100%;
@@ -69,8 +67,8 @@
             position: running(page-header-running);
             padding-top: 6px;
             margin-top: 8px;
-            border-bottom: 3px solid var(--indigo-700);
-            background: var(--white);
+            border-bottom: 3px solid #2f77c3;
+            background: #ffffff;
         }
 
         .page-header td {
@@ -82,15 +80,15 @@
         }
 
         .page-header .hdr-user {
-            font-size: 15px;
+            font-size: 22px;
             font-weight: bold;
-            color: var(--indigo-900);
+            color: #1a1150;
             letter-spacing: -0.01em;
         }
 
         .page-header .hdr-gen {
-            font-size: 9px;
-            color: var(--ink-500);
+            font-size: 10px;
+            color: #6b7280;
             margin-top: 2px;
             letter-spacing: 0.02em;
         }
@@ -117,7 +115,7 @@
             text-align: center;
             line-height: 1;
             padding: 0;
-            margin: 0;
+            margin: 5px;
         }
 
         .footer-logo {
@@ -132,26 +130,30 @@
         /* === Title bar === */
         .title-bar {
             margin: 12px 0 14px;
-            background: linear-gradient(100deg, var(--indigo-900) 0%, var(--indigo-700) 55%, var(--teal-700) 100%);
-            border-radius: var(--r-md);
-            box-shadow: var(--shadow-md);
+            /* background: rgba(0, 132, 255, 0.288); */
+            background-color: #cfeefc;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(26, 17, 80, 0.10), 0 0 0 1px rgba(26, 17, 80, 0.05);
         }
+
 
         .title-bar td {
             padding: 10px 20px;
         }
 
         .title-bar .t-title {
+            padding: 8px;
             font-size: 13px;
             font-weight: bold;
-            color: var(--white);
+            color: black;
             width: 34%;
             letter-spacing: 0.02em;
         }
 
         .title-bar .t-meta {
-            font-size: 9px;
-            color: rgba(255, 255, 255, 0.65);
+            padding-top: 8px;
+            font-size: 13px;
+            color: black;
             font-style: italic;
             width: 22%;
             letter-spacing: 0.04em;
@@ -159,26 +161,13 @@
 
         /* === Customer card === */
         .customer-card {
-            border: 1.5px solid var(--border);
-            border-radius: var(--r-lg);
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
             padding: 18px 22px;
             margin-bottom: 14px;
-            background: var(--white);
-            box-shadow: var(--shadow-md);
-            border-left: 5px solid var(--indigo-700);
-            position: relative;
-        }
-
-        .customer-card::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, transparent 50%, var(--indigo-50) 50%);
-            border-top-right-radius: var(--r-lg);
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(26, 17, 80, 0.10), 0 0 0 1px rgba(26, 17, 80, 0.05);
+            border-left: 5px solid #0f9cb3;
         }
 
         .customer-card .cc-left {
@@ -191,9 +180,9 @@
         }
 
         .customer-id {
-            font-size: 10px;
+            font-size: 12px;
             font-weight: bold;
-            color: var(--indigo-500);
+            color: #0f9cb3;
             letter-spacing: 0.10em;
             text-transform: uppercase;
             margin-right: 6px;
@@ -202,7 +191,7 @@
         .customer-name {
             font-size: 24px;
             font-weight: bold;
-            color: var(--indigo-900);
+            color: black;
             letter-spacing: -0.02em;
             line-height: 1.2;
         }
@@ -214,13 +203,18 @@
         .risk-pill {
             display: inline-flex;
             align-items: center;
-            background-color: #fde7e7;
-            color: #d63031;
-            padding: 8px 14px;
-            border-radius: 14px;
+            gap: 5px;
+            background-color: rgba(255, 0, 0, 0.288);
+            margin-left: 15px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: black;
+            padding: 5px 14px;
+            border-radius: 20px;
             font-weight: bold;
-            font-size: 15px;
-            vertical-align: middle;
+            font-size: 12px;
+            letter-spacing: 0.03em;
+            box-shadow: 0 2px 8px rgba(255, 0, 30, 0.35);
         }
 
         .risk-img {
@@ -230,151 +224,157 @@
             vertical-align: middle;
         }
 
-        .condition-box {
-            display: inline-grid;
-            gap: 7px;
-            border: 1px solid #d8d8d8;
-            border-radius: 7px;
-            padding: 8px 12px;
-            margin-top: 30px;
-        }
-
-        .condition-title {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-
-        .condition-body {
-            margin-top: 5px;
-            font-size: 12px;
-            color: #555;
-        }
-
-        .next-review {
-            font-size: 11px;
-            color: #888;
-            margin-top: 4px;
-            margin-left: 18px;
-        }
-
         .speedometer-img {
-            width: 280px;
-            height: auto;
-        }
-
-        .risk-img {
-            width: 18px;
+            width: 250px;
             height: auto;
         }
 
         .arrow_right_img {
-            width: 15px;
+            width: 14px;
             height: auto;
         }
 
         .arrow_right_ch_img {
-            width: 15px;
+            width: 14px;
             height: auto;
         }
 
         .arrow_upper_img {
-            width: 15px;
+            width: 22px;
             height: auto;
         }
 
         .case_history_img {
-            display: grid;
-            width: 15px;
-            height: auto;
-            margin-top: 20px;
+            width: 16px;
+            height: 16px;
         }
+
+        .condition-box {
+            display: inline-grid;
+            gap: 8px;
+            border: 1.5px solid #fbbf24;
+            border-radius: 8px;
+            padding: 9px 14px;
+            margin-top: 14px;
+            background: #fffbeb;
+        }
+
+        .condition-title {
+            font-size: 10px;
+            font-weight: bold;
+            color: #b45309;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+        }
+
+        .condition-body {
+            font-size: 12px;
+            color: #374151;
+        }
+
+        .next-review {
+            font-size: 10px;
+            color: #6b7280;
+            margin-top: 5px;
+            margin-left: 20px;
+            letter-spacing: 0.02em;
+        }
+
 
         /* === Status bar === */
         .status-bar {
-            border: 1px solid #d8d8d8;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            border-width: 8px;
+            margin-bottom: 10px;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(26, 17, 80, 0.08), 0 0 0 1px rgba(26, 17, 80, 0.04);
+            overflow: hidden;
         }
 
         .status-bar td {
-            width: 50%;
-            padding: 10px;
-            font-size: 20px;
+            /* width: 50%; */
+            padding: 9px 18px;
         }
 
         .status-bar td.divider {
-            border-left: 1px solid #e0e0e0;
+            border-left: 1.5px solid #e2e8f0;
+            width: 70%;
         }
 
         .status-label {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
-            color: #2c3e50;
+            color: #1a1150;
             display: inline-block;
-            margin-right: 14px;
-            margin-left: 15px;
+            margin-right: 12px;
         }
 
         .status-pill {
             display: inline-block;
-            background-color: rgba(247, 170, 28, 0.5);
-            color: #555;
             padding: 4px 18px;
-            border-radius: 5px;
-            font-size: 13px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid #8bd9fd;
+            background-color: #8bd9fd6b;
+            letter-spacing: 0.05em;
+
         }
 
         /* === Factors table === */
         .factors-card {
-            border: 1px solid #d8d8d8;
-            border-radius: 7px;
-            margin-bottom: 18px;
-            margin-top: 20px;
-            padding: 10px;
-        }
-
-        .factors-head {
-            background-color: #f8f9fa;
-            font-family: sans-serif;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            margin: 22px 0 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(26, 17, 80, 0.10), 0 0 0 1px rgba(26, 17, 80, 0.05);
         }
 
         .factors-head td {
-            padding: 12px 16px;
+            border-top: 1px solid #0f9cb3;
+            border-bottom: 1px solid #0f9cb3;
+            padding: 11px 18px;
             font-weight: bold;
-            font-size: 15px;
-            color: #2c3e50;
+            font-size: 14px;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
         }
 
         .factor-row td {
-            padding: 12px 16px;
+            padding: 10px 16px;
+            border-top: 1px solid #f3f4f6;
             font-size: 13px;
         }
 
         /* Add this to gave (1,3,5) lined colored. */
 
-        .factor-row:nth-child(odd) td {
-            background-color: #f0efef;
+        .factor-row:nth-child(even) td {
+            background: #eff8fc;
         }
 
         /* Factor name (left side of each row) — bold for emphasis */
         .factor-row .col-name {
             font-weight: bold;
-            color: #2c3e50;
+            color: black;
         }
 
         .col-name {
-            background-color: #ffffff;
             width: 30%;
             padding-left: 18px;
         }
 
         .col-weight {
             width: 8%;
+            color: #6b7280;
+            font-weight: 600;
         }
 
         .col-attr {
-            background-color: #ffffff;
             width: 22%;
             font-weight: bold;
+            color: black;
         }
 
         .col-arrow {
@@ -383,7 +383,7 @@
 
         .col-value {
             width: 26%;
-            color: #555;
+            color: #374151;
         }
 
         .col-score {
@@ -393,9 +393,9 @@
 
         .bullet {
             display: inline-block;
-            width: 3px;
-            height: 3px;
-            background-color: #555;
+            width: 6px;
+            height: 6px;
+            background-color: black;
             border-radius: 50%;
             margin-right: 8px;
             vertical-align: middle;
@@ -413,46 +413,63 @@
 
         .score-pill {
             display: inline-block;
-            border: 1px solid #b8b8b8;
-            border-radius: 14px;
-            padding: 3px 12px;
-            font-size: 9.5px;
-            color: #2c3e50;
-            min-width: 18px;
+            border: 1.5px solid #2f77c3;
+            border-radius: 20px;
+            padding: 2px 11px;
+            font-size: 12px;
+            font-weight: bolder;
+            color: #2f77c3;
             text-align: center;
+            background: #ffffff;
+            min-width: 22px;
         }
 
         .factor-total td {
-            background-color: #c9e7c3;
+            /* background-color: lightblue; */
+            border-bottom: 1px solid #0f9cb3;
             font-weight: bold;
-            font-size: 12px;
-            color: #2c3e50;
-            padding: 12px 16px;
-            border-top: 1px solid #e0e0e0;
+            font-size: 15px;
+            color: black;
+            padding: 11px 16px;
+            border-top: 2px solid #0b7285;
         }
 
         .factor-total .label-light {
-            font-weight: normal;
-            color: #555;
+            font-weight: 400;
+            color: black;
+        }
+
+        .factor-total .score-pill {
+            border-color: rgba(255, 255, 255, 0.60);
+            color: black;
+            background: rgba(255, 255, 255, 0.15);
+            font-size: 12px;
+            padding: 3px 14px;
         }
 
         /* === KYC sections === */
         .kyc-banner {
-            background-color: #dfe2e5;
-            padding: 14px 16px;
-            border-radius: 7px;
-            margin-top: 20px;
-            margin-bottom: 18px;
-            padding-left: 20px;
+            /* background: linear-gradient(90deg, #1e8cdb80 0%, #00bff975 50%); */
+            border: 2px solid lightblue;
+            border-radius: 8px;
+            padding: 9px 18px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             font-weight: bold;
-            font-size: 15px;
-            color: #2c3e50;
+            font-size: 14px;
+            color: rgb(2, 2, 41);
+            text-transform: uppercase;
+            letter-spacing: 0.10em;
         }
 
         .kyc-full {
-            border: 1px solid #e6e6e6;
-            border-radius: 7px;
-            padding: 10px 14px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin-bottom: 7px;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(26, 17, 80, 0.08), 0 0 0 1px rgba(26, 17, 80, 0.04);
+            border-left: 4px solid #0f9cb3;
         }
 
         .kyc-grid {
@@ -462,127 +479,139 @@
         }
 
         .kyc-cell {
-            border: 1px solid #e6e6e6;
-            padding: 8px 10px;
+            border: 1.5px solid #e2e8f0;
+            padding: 10px 13px;
             width: 33.33%;
             vertical-align: top;
+            background: #ffffff;
         }
 
         /* Round the 4 outer corners of the KYC grid by rounding the corner cells.
        openhtmltopdf doesn't honour overflow:hidden on tables, so per-cell radius
        is the reliable way. */
         .kyc-grid tr:first-child td:first-child {
-            border-top-left-radius: 7px;
+            border-top-left-radius: 8px;
         }
 
         .kyc-grid tr:first-child td:last-child {
-            border-top-right-radius: 7px;
+            border-top-right-radius: 8px;
         }
 
         .kyc-grid tr:last-child td:first-child {
-            border-bottom-left-radius: 7px;
+            border-bottom-left-radius: 8px;
         }
 
         .kyc-grid tr:last-child td:last-child {
-            border-bottom-right-radius: 7px;
+            border-bottom-right-radius: 8px;
         }
 
         .kyc-section-title {
             font-weight: bold;
-            font-size: 15px;
-            color: #2c3e50;
-            margin-bottom: 5px;
+            font-size: 12px;
+            color: black;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
 
         .kyc-section-title.alert {
-            color: #d63031;
+            color: #b5192a;
         }
 
         .section-icon {
             display: inline-block;
             width: 9px;
             height: 9px;
-            border: 2px dashed #888;
-            border-radius: 5px;
+            border: 1.5px dashed #0f9cb3;
             margin-right: 6px;
             vertical-align: middle;
-            margin-bottom: 1px;
+            border-radius: 5px;
         }
 
         .kyc-section-title.alert .section-icon {
-            border-color: #d63031;
+            border-color: #e0253a;
         }
 
         .kyc-field {
-            font-family: revert;
-            font-size: 13px;
-            margin-bottom: 2px;
-            line-height: 1.4;
-            margin-left: 18px;
+            font-size: 11px;
+            margin-bottom: 3px;
+            margin-left: 20px;
+            line-height: 1.5;
         }
 
         .kyc-label {
             font-weight: bold;
-            color: #2c3e50;
+            color: #374151;
         }
 
         .kyc-value {
-            color: #555;
+            color: #6b7280;
         }
 
         .kyc-value.alert {
-            color: #d63031;
+            color: #b5192a;
+            font-weight: bold;
         }
 
         .risk-profile-bar {
-            background-color: #dfe2e5;
-            border: 1px solid #e6e6e6;
-            padding: 10px 14px;
-            margin-top: 25px;
-            margin-bottom: 20px;
+            font-size: 14px;
+            border: 2px solid lightblue;
+            border-radius: 8px;
+            padding: 9px 16px;
+            margin: 10px 0;
         }
 
         .risk-profile-bar .label {
             font-weight: bold;
             font-style: italic;
-            font-size: 13px;
+            color: rgb(3, 3, 41);
         }
 
         .risk-profile-bar .value {
             font-style: italic;
-            color: #555;
-            font-size: 13px;
+            color: #374151;
         }
 
         /* === Case history === */
         .case-banner {
-            border: 1px solid #e6e6e6;
-            padding: 10px;
+            border: 1.5px solid #374151;
+            border-radius: 12px;
+            padding: 14px 18px;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(26, 17, 80, 0.08), 0 0 0 1px rgba(26, 17, 80, 0.04);
+            border-top: 4px solid #0f9cb3;
         }
 
         .case-banner-title {
             font-weight: bold;
-            font-size: 17px;
-            color: #2c3e50;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-            margin-bottom: 18px;
-            margin-left: 25px;
-            margin-top: -18px;
+            font-size: 15px;
+            color: #111827;
+            border-bottom: 1.5px solid #e2e8f0;
+            padding-bottom: 19px;
+            margin-bottom: 25px;
+            margin-left: 26px;
+            margin-top: -19px;
+            display: flex;
             align-items: center;
+            gap: 9px;
+            letter-spacing: 0.01em;
+            line-height: 1;
         }
 
         .case-banner-title img {
+            width: 16px;
+            height: 16px;
             display: inline-block;
-            width: 15px;
-            height: 15px;
             vertical-align: middle;
-            margin-right: 10px;
         }
 
         .case-entry {
-            padding: 2px 4px;
-            margin-bottom: 6px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            background: #f9fafb;
+            border-left: 4px solid #0f9cb3;
         }
 
         /* Fixed table layout so column widths are identical across every entry —
@@ -590,7 +619,6 @@
         .case-entry table {
             table-layout: fixed;
             width: 100%;
-            border-collapse: collapse;
         }
 
         .no-border {
@@ -602,10 +630,6 @@
 
         .case-entry td {
             vertical-align: middle;
-        }
-
-        .arrow_upper_img {
-            width: 20px;
         }
 
         .case-info {
@@ -631,14 +655,14 @@
         }
 
         .case-date {
-            color: #777;
-            font-size: 13px;
+            color: darkslategrey;
+            font-size: 12px;
+            font-weight: bold;
         }
 
         .case-action {
-            /* font-weight: 600px; */
-            font-size: 11px;
-            color: #2c3e50;
+            font-size: 12px;
+            color: #374151;
             margin-top: 2px;
         }
 
@@ -657,26 +681,33 @@
         }
 
         .stage-label {
-            color: #555;
-            font-size: 13px;
+            color: #6b7280;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
 
         .stage-pill {
             display: inline-block;
-            padding: 7px 12px;
-            font-size: 12px;
-            border-radius: 5px;
+            padding: 4px 16px;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 4px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
         .stage-pill.review {
-            background-color: #eaf2fc;
-            color: #5a8db5;
+            background: #e3f9fc;
+            color: #0b7285;
+            border: 1.5px solid #66d9e8;
         }
 
         .stage-pill.open {
-            background-color: #28a745;
+            background: #068a2e;
             color: #ffffff;
-            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(6, 95, 70, 0.30);
         }
 
         /* === Pagination control ===
