@@ -7,11 +7,11 @@
     <style type="text/css">
         body {
             font-family: Helvetica, Arial, sans-serif;
-            font-size: 12px;
-            color: #111827;
-            margin: 15px;
-            padding: 0;
-            line-height: 1.5;
+            font-size: 10px;
+            color: #4a5568;
+            margin: 0;
+            padding: 10px;
+            line-height: 1.55;
             background: #ffffff;
         }
 
@@ -29,7 +29,7 @@
             size: A4;
             /* Top: 16mm leaves a 6mm gap above the running header (matching left/right margins),
            then header occupies ~10mm. Bottom: 8mm for footer text + small gap. */
-            margin: 20mm 6mm 18mm 6mm;
+            margin: 22mm 6mm 16mm 6mm;
 
             @top-center {
                 content: element(page-header-running);
@@ -65,14 +65,14 @@
        padding-bottom creates the gap from header border-bottom → first body element. */
         .page-header {
             position: running(page-header-running);
-            padding-top: 6px;
-            margin-top: 8px;
-            border-bottom: 3px solid #2f77c3;
+            padding-top: 5px;
+            margin-top: 6px;
+            border-bottom: 2px solid #1e9de3;
             background: #ffffff;
         }
 
         .page-header td {
-            padding-bottom: 7px;
+            padding-bottom: 6px;
         }
 
         .page-header .hdr-left {
@@ -80,19 +80,16 @@
         }
 
         .page-header .hdr-user {
-            font-size: 22px;
+            font-size: 14px;
             font-weight: bold;
-            color: #1a1150;
-            letter-spacing: -0.01em;
+            color: #1a1a2e;
         }
 
         .page-header .hdr-gen {
-            font-size: 10px;
-            color: #6b7280;
+            font-size: 9px;
+            color: #a0aec0;
             margin-top: 2px;
-            letter-spacing: 0.02em;
         }
-
 
         .page-header .hdr-right {
             width: 38%;
@@ -103,7 +100,7 @@
         /* Header logo image (replaces the old text-based screenzaa/BY TRACKWIZZ stack).
        Width controls the rendered size; aspect ratio is preserved by height: auto. */
         .header-logo {
-            width: 170px;
+            width: 165px;
             height: auto;
         }
 
@@ -114,9 +111,10 @@
             position: running(footer-logo-running);
             text-align: center;
             line-height: 1;
+            margin: 0;
             padding: 0;
-            margin: 5px;
         }
+
 
         .footer-logo {
             width: 110px;
@@ -126,48 +124,45 @@
         }
 
 
-
         /* === Title bar === */
         .title-bar {
             margin: 12px 0 14px;
-            /* background: rgba(0, 132, 255, 0.288); */
-            background-color: #cfeefc;
+            background: #ffffff;
+            border: 1.5px solid #1e9de3;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(26, 17, 80, 0.10), 0 0 0 1px rgba(26, 17, 80, 0.05);
+            box-shadow: 0 1px 4px rgba(30, 157, 227, 0.07), 0 0 0 1px rgba(30, 157, 227, 0.05);
         }
 
-
         .title-bar td {
-            padding: 10px 20px;
+            padding: 11px 22px;
         }
 
         .title-bar .t-title {
-            padding: 8px;
             font-size: 13px;
             font-weight: bold;
-            color: black;
+            color: #1e9de3;
             width: 34%;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.01em;
         }
 
         .title-bar .t-meta {
-            padding-top: 8px;
-            font-size: 13px;
-            color: black;
+            font-size: 9px;
+            color: #718096;
             font-style: italic;
             width: 22%;
-            letter-spacing: 0.04em;
         }
 
         /* === Customer card === */
         .customer-card {
-            border: 1.5px solid #e2e8f0;
+            border: 1px solid #e2eaf3;
             border-radius: 12px;
             padding: 18px 22px;
             margin-bottom: 14px;
             background: #ffffff;
-            box-shadow: 0 4px 12px rgba(26, 17, 80, 0.10), 0 0 0 1px rgba(26, 17, 80, 0.05);
-            border-left: 5px solid #0f9cb3;
+            box-shadow: 0 3px 12px rgba(30, 157, 227, 0.10), 0 0 0 1px rgba(30, 157, 227, 0.06);
+            border-top: 3px solid #1e9de3;
+            position: relative;
+            overflow: hidden;
         }
 
         .customer-card .cc-left {
@@ -180,41 +175,38 @@
         }
 
         .customer-id {
-            font-size: 12px;
+            font-size: 9px;
             font-weight: bold;
-            color: #0f9cb3;
-            letter-spacing: 0.10em;
+            color: #1e9de3;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            margin-right: 6px;
         }
 
         .customer-name {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
-            color: black;
-            letter-spacing: -0.02em;
+            color: #1a1a2e;
+            letter-spacing: -0.01em;
             line-height: 1.2;
+            margin-top: 3px;
         }
 
         .risk-pill-wrap {
-            margin-top: 11px;
+            margin-top: 12px;
         }
 
         .risk-pill {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            background-color: rgba(255, 0, 0, 0.288);
-            margin-left: 15px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            color: black;
-            padding: 5px 14px;
+            gap: 6px;
+            background: rgba(229, 62, 62, 0.12);
+            color: #e53e3e;
+            border: 1.5px solid rgba(229, 62, 62, 0.35);
+            padding: 6px 16px;
             border-radius: 20px;
             font-weight: bold;
-            font-size: 12px;
-            letter-spacing: 0.03em;
-            box-shadow: 0 2px 8px rgba(255, 0, 30, 0.35);
+            font-size: 13px;
+            letter-spacing: 0.02em;
         }
 
         .risk-img {
@@ -225,7 +217,7 @@
         }
 
         .speedometer-img {
-            width: 250px;
+            width: 215px;
             height: auto;
         }
 
@@ -235,6 +227,11 @@
         }
 
         .arrow_right_ch_img {
+            width: 14px;
+            height: auto;
+        }
+
+        .arrow_upper_img {
             width: 14px;
             height: auto;
         }
@@ -251,113 +248,127 @@
 
         .condition-box {
             display: inline-grid;
-            gap: 8px;
-            border: 1.5px solid #fbbf24;
+            gap: 5px;
+            border: 1px solid #fbd38d;
             border-radius: 8px;
             padding: 9px 14px;
             margin-top: 14px;
-            background: #fffbeb;
+            background: #fffaf0;
+            border-left: 3px solid #dd6b20;
         }
 
         .condition-title {
-            font-size: 10px;
+            font-size: 9px;
             font-weight: bold;
-            color: #b45309;
+            color: #dd6b20;
             text-transform: uppercase;
-            letter-spacing: 0.09em;
+            letter-spacing: 0.10em;
         }
 
         .condition-body {
-            font-size: 12px;
-            color: #374151;
+            font-size: 10px;
+            color: #4a5568;
+            line-height: 1.4;
         }
 
         .next-review {
-            font-size: 10px;
-            color: #6b7280;
-            margin-top: 5px;
-            margin-left: 20px;
-            letter-spacing: 0.02em;
+            font-size: 9px;
+            color: #a0aec0;
+            margin-top: 4px;
         }
+
 
 
         /* === Status bar === */
         .status-bar {
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid #1e9de3;
             border-radius: 8px;
-            border-width: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             background: #ffffff;
-            box-shadow: 0 1px 3px rgba(26, 17, 80, 0.08), 0 0 0 1px rgba(26, 17, 80, 0.04);
+            box-shadow: 0 1px 4px rgba(30, 157, 227, 0.07), 0 0 0 1px rgba(30, 157, 227, 0.05);
             overflow: hidden;
         }
 
-        .status-bar td {
-            /* width: 50%; */
+        /* .status-bar td {
+             width: 50%; 
             padding: 9px 18px;
+            border-right: 1.5px solid #1e9de3;
+        } */
+
+        .status-bar td:first-child {
+            width: 30%;
+            padding: 11px 16px;
+            border-right: 1.5px solid #1e9de3;
+            vertical-align: middle;
         }
 
         .status-bar td.divider {
-            border-left: 1.5px solid #e2e8f0;
             width: 70%;
+            padding: 11px 16px;
+            background: #ffffff;
+            vertical-align: middle;
         }
 
         .status-label {
-            font-size: 14px;
+            font-size: 10px;
             font-weight: bold;
-            color: #1a1150;
-            display: inline-block;
-            margin-right: 12px;
+            color: #1a1a2e;
+            display: block;
+            margin-bottom: 5px;
+            letter-spacing: 0.01em;
         }
 
         .status-pill {
             display: inline-block;
-            padding: 4px 18px;
-            border-radius: 7px;
-            font-size: 12px;
+            background: #e8f4fd;
+            color: #1580c0;
+            padding: 4px 20px;
+            border-radius: 20px;
+            font-size: 9px;
             font-weight: bold;
-            border: 1px solid #8bd9fd;
-            background-color: #8bd9fd6b;
-            letter-spacing: 0.05em;
-
+            letter-spacing: 0.06em;
+            border: 1px solid #c5e4f7;
         }
 
         /* === Factors table === */
         .factors-card {
-            border: 1.5px solid #e2e8f0;
+            border: 1px solid #e2eaf3;
             border-radius: 12px;
             margin: 22px 0 18px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(26, 17, 80, 0.10), 0 0 0 1px rgba(26, 17, 80, 0.05);
+            box-shadow: 0 3px 12px rgba(30, 157, 227, 0.10), 0 0 0 1px rgba(30, 157, 227, 0.06);
+        }
+
+        .factors-head {
+            background: #ffffff;
+            border-bottom: 2px solid #1e9de3;
         }
 
         .factors-head td {
-            border-top: 1px solid #0f9cb3;
-            border-bottom: 1px solid #0f9cb3;
             padding: 11px 18px;
             font-weight: bold;
-            font-size: 14px;
-            color: black;
+            font-size: 10px;
+            color: #1e9de3;
             text-transform: uppercase;
             letter-spacing: 0.09em;
         }
 
         .factor-row td {
             padding: 10px 16px;
-            border-top: 1px solid #f3f4f6;
-            font-size: 13px;
+            border-top: 1px solid #e2eaf3;
+            font-size: 10px;
         }
 
         /* Add this to gave (1,3,5) lined colored. */
 
         .factor-row:nth-child(even) td {
-            background: #eff8fc;
+            background: #f0f8fe;
         }
 
         /* Factor name (left side of each row) — bold for emphasis */
         .factor-row .col-name {
             font-weight: bold;
-            color: black;
+            color: #1a1a2e;
         }
 
         .col-name {
@@ -367,14 +378,14 @@
 
         .col-weight {
             width: 8%;
-            color: #6b7280;
+            color: #a0aec0;
             font-weight: 600;
         }
 
         .col-attr {
             width: 22%;
             font-weight: bold;
-            color: black;
+            color: #1e9de3;
         }
 
         .col-arrow {
@@ -383,7 +394,7 @@
 
         .col-value {
             width: 26%;
-            color: #374151;
+            color: #718096;
         }
 
         .col-score {
@@ -395,7 +406,7 @@
             display: inline-block;
             width: 6px;
             height: 6px;
-            background-color: black;
+            background: #1e9de3;
             border-radius: 50%;
             margin-right: 8px;
             vertical-align: middle;
@@ -413,63 +424,62 @@
 
         .score-pill {
             display: inline-block;
-            border: 1.5px solid #2f77c3;
+            border: 1.5px solid #c5e4f7;
             border-radius: 20px;
-            padding: 2px 11px;
-            font-size: 12px;
-            font-weight: bolder;
-            color: #2f77c3;
+            padding: 2px 12px;
+            font-size: 9px;
+            font-weight: bold;
+            color: #1580c0;
             text-align: center;
-            background: #ffffff;
+            background: #e8f4fd;
             min-width: 22px;
         }
 
         .factor-total td {
-            /* background-color: lightblue; */
-            border-bottom: 1px solid #0f9cb3;
+            background: #e8f4fd;
             font-weight: bold;
-            font-size: 15px;
-            color: black;
+            font-size: 11px;
+            color: #1a1a2e;
             padding: 11px 16px;
-            border-top: 2px solid #0b7285;
+            border-top: 2px solid #c5e4f7;
         }
 
         .factor-total .label-light {
             font-weight: 400;
-            color: black;
+            color: #718096;
         }
 
         .factor-total .score-pill {
-            border-color: rgba(255, 255, 255, 0.60);
-            color: black;
-            background: rgba(255, 255, 255, 0.15);
-            font-size: 12px;
+            border-color: #1e9de3;
+            color: #1580c0;
+            background: #ffffff;
+            font-size: 10.5px;
             padding: 3px 14px;
         }
 
         /* === KYC sections === */
         .kyc-banner {
-            /* background: linear-gradient(90deg, #1e8cdb80 0%, #00bff975 50%); */
-            border: 2px solid lightblue;
-            border-radius: 8px;
+            background: #ffffff;
+            border: 1.5px solid #1e9de3;
+            border-radius: 8px 8px 0 0;
             padding: 9px 18px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 12px;
+            margin-bottom: 0;
             font-weight: bold;
-            font-size: 14px;
-            color: rgb(2, 2, 41);
+            font-size: 10px;
+            color: #1e9de3;
             text-transform: uppercase;
-            letter-spacing: 0.10em;
+            letter-spacing: 0.09em;
         }
 
         .kyc-full {
-            border: 1.5px solid #e2e8f0;
+            border: 1px solid #e2eaf3;
             border-radius: 8px;
             padding: 10px 16px;
             margin-bottom: 7px;
             background: #ffffff;
-            box-shadow: 0 1px 3px rgba(26, 17, 80, 0.08), 0 0 0 1px rgba(26, 17, 80, 0.04);
-            border-left: 4px solid #0f9cb3;
+            box-shadow: 0 1px 4px rgba(30, 157, 227, 0.07), 0 0 0 1px rgba(30, 157, 227, 0.05);
+            border-left: 3px solid #1e9de3;
         }
 
         .kyc-grid {
@@ -479,7 +489,8 @@
         }
 
         .kyc-cell {
-            border: 1.5px solid #e2e8f0;
+            border: 1px solid #e2eaf3;
+            border-top: 3px solid #1e9de3;
             padding: 10px 13px;
             width: 33.33%;
             vertical-align: top;
@@ -507,111 +518,111 @@
 
         .kyc-section-title {
             font-weight: bold;
-            font-size: 12px;
-            color: black;
+            font-size: 10px;
+            color: #1580c0;
             margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 0.06em;
         }
 
         .kyc-section-title.alert {
-            color: #b5192a;
+            color: #e53e3e;
         }
 
         .section-icon {
             display: inline-block;
-            width: 9px;
-            height: 9px;
-            border: 1.5px dashed #0f9cb3;
+            width: 8px;
+            height: 8px;
+            border: 1.5px solid #c5e4f7;
             margin-right: 6px;
             vertical-align: middle;
-            border-radius: 5px;
+            border-radius: 2px;
         }
 
         .kyc-section-title.alert .section-icon {
-            border-color: #e0253a;
+            border-color: #e53e3e;
         }
 
         .kyc-field {
-            font-size: 11px;
+            font-size: 9.5px;
             margin-bottom: 3px;
-            margin-left: 20px;
             line-height: 1.5;
         }
 
         .kyc-label {
             font-weight: bold;
-            color: #374151;
+            color: #4a5568;
         }
 
         .kyc-value {
-            color: #6b7280;
+            color: #718096;
         }
 
         .kyc-value.alert {
-            color: #b5192a;
+            color: #e53e3e;
             font-weight: bold;
         }
 
         .risk-profile-bar {
-            font-size: 14px;
-            border: 2px solid lightblue;
+            background: #e8f4fd;
+            border: 1px solid #c5e4f7;
             border-radius: 8px;
             padding: 9px 16px;
             margin: 10px 0;
+            border-left: 3px solid #1e9de3;
         }
 
         .risk-profile-bar .label {
             font-weight: bold;
             font-style: italic;
-            color: rgb(3, 3, 41);
+            color: #1580c0;
         }
 
         .risk-profile-bar .value {
             font-style: italic;
-            color: #374151;
+            color: #718096;
         }
 
         /* === Case history === */
-        .case-banner {
-            border: 1.5px solid #374151;
-            border-radius: 12px;
-            padding: 14px 18px;
-            background: #ffffff;
-            box-shadow: 0 1px 3px rgba(26, 17, 80, 0.08), 0 0 0 1px rgba(26, 17, 80, 0.04);
-            border-top: 4px solid #0f9cb3;
+        .case-banner-title {
+            font-weight: bold;
+            font-size: 13px;
+            color: #1a1a2e;
+            border-bottom: 1px solid #e2eaf3;
+            padding-bottom: 9px;
+            margin-bottom: 11px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            line-height: 1;
         }
 
         .case-banner-title {
             font-weight: bold;
-            font-size: 15px;
-            color: #111827;
-            border-bottom: 1.5px solid #e2e8f0;
-            padding-bottom: 19px;
-            margin-bottom: 25px;
-            margin-left: 26px;
-            margin-top: -19px;
+            font-size: 13px;
+            color: #1a1a2e;
+            border-bottom: 1px solid #e2eaf3;
+            padding-bottom: 9px;
+            margin-bottom: 11px;
             display: flex;
             align-items: center;
             gap: 9px;
-            letter-spacing: 0.01em;
             line-height: 1;
         }
 
         .case-banner-title img {
             width: 16px;
             height: 16px;
-            display: inline-block;
             vertical-align: middle;
         }
 
         .case-entry {
-            border: 1.5px solid #e2e8f0;
+            border: 1px solid #e2eaf3;
             border-radius: 8px;
             padding: 10px 14px;
             margin-bottom: 8px;
-            background: #f9fafb;
-            border-left: 4px solid #0f9cb3;
+            background: #f0f8fe;
+            border-left: 3px solid #1e9de3;
         }
 
         /* Fixed table layout so column widths are identical across every entry —
@@ -643,6 +654,7 @@
             padding-right: 6px;
         }
 
+
         .case-stage-arrow-col {
             width: 5%;
             text-align: center;
@@ -655,34 +667,34 @@
         }
 
         .case-date {
-            color: darkslategrey;
-            font-size: 12px;
+            color: #1e9de3;
+            font-size: 10px;
             font-weight: bold;
         }
 
         .case-action {
-            font-size: 12px;
-            color: #374151;
+            font-size: 10px;
+            color: #718096;
             margin-top: 2px;
         }
 
-        .inner-table {
+        /* .inner-table {
             width: 80%;
             border: 1px solid #dcdcdc;
         }
 
         .inner-table td {
             padding: 18px;
-            /* border-right: hidden; */
+            border-right: hidden;
         }
 
         .case-info.inner-table {
             border-right: hidden;
-        }
+        } */
 
         .stage-label {
-            color: #6b7280;
-            font-size: 10px;
+            color: #a0aec0;
+            font-size: 9px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.06em;
@@ -690,24 +702,24 @@
 
         .stage-pill {
             display: inline-block;
-            padding: 4px 16px;
-            font-size: 10px;
+            padding: 3px 14px;
+            font-size: 9px;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 20px;
             letter-spacing: 0.04em;
             text-transform: uppercase;
         }
 
         .stage-pill.review {
-            background: #e3f9fc;
-            color: #0b7285;
-            border: 1.5px solid #66d9e8;
+            background: #e8f4fd;
+            color: #1580c0;
+            border: 1px solid #c5e4f7;
         }
 
         .stage-pill.open {
-            background: #068a2e;
-            color: #ffffff;
-            box-shadow: 0 2px 6px rgba(6, 95, 70, 0.30);
+            background: #38a169;
+            color: #fff;
+            box-shadow: 0 2px 6px rgba(56, 161, 105, 0.22);
         }
 
         /* === Pagination control ===
