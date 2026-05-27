@@ -7,10 +7,10 @@
     <style type="text/css">
         body {
             font-family: Helvetica, Arial, sans-serif;
-            font-size: 10px;
+            font-size: 12px;
             color: #4a5568;
             margin: 0;
-            padding: 10px;
+            padding: 12px;
             line-height: 1.55;
             background: #ffffff;
         }
@@ -86,7 +86,7 @@
         }
 
         .page-header .hdr-gen {
-            font-size: 9px;
+            font-size: 10px;
             color: #a0aec0;
             margin-top: 2px;
         }
@@ -108,19 +108,22 @@
        @bottom-center on every page. Sizing the inner img is the reliable way; the
        @page margin box's own width/height does not constrain content: url() images. */
         .footer-logo-wrap {
-            position: running(footer-logo-running);
-            text-align: center;
-            line-height: 1;
-            margin: 0;
-            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
 
         .footer-logo {
-            width: 110px;
+            width: 112px;
             height: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        .footer-left {
+            color: #e0253a;
         }
 
 
@@ -140,13 +143,12 @@
         .title-bar .t-title {
             font-size: 13px;
             font-weight: bold;
-            color: #1e9de3;
             width: 34%;
             letter-spacing: 0.01em;
         }
 
         .title-bar .t-meta {
-            font-size: 9px;
+            font-size: 11px;
             color: #718096;
             font-style: italic;
             width: 22%;
@@ -175,7 +177,7 @@
         }
 
         .customer-id {
-            font-size: 9px;
+            font-size: 10px;
             font-weight: bold;
             color: #1e9de3;
             letter-spacing: 0.12em;
@@ -196,9 +198,7 @@
         }
 
         .risk-pill {
-            display: inline-flex;
             align-items: center;
-            gap: 6px;
             background: rgba(229, 62, 62, 0.12);
             color: #e53e3e;
             border: 1.5px solid rgba(229, 62, 62, 0.35);
@@ -217,27 +217,22 @@
         }
 
         .speedometer-img {
-            width: 215px;
+            width: 250px;
             height: auto;
         }
 
         .arrow_right_img {
-            width: 14px;
-            height: auto;
+            font-size: 17px;
+            color: #718096;
         }
 
         .arrow_right_ch_img {
-            width: 14px;
-            height: auto;
+            font-size: 17px;
+            color: #1e9de3;
         }
 
-        .arrow_upper_img {
-            width: 14px;
-            height: auto;
-        }
-
-        .arrow_upper_img {
-            width: 22px;
+        .bi-arrow-up {
+            width: 20px;
             height: auto;
         }
 
@@ -248,31 +243,31 @@
 
         .condition-box {
             display: inline-grid;
-            gap: 5px;
+            gap: 12px;
             border: 1px solid #fbd38d;
             border-radius: 8px;
-            padding: 9px 14px;
+            padding: 10px 14px;
             margin-top: 14px;
             background: #fffaf0;
             border-left: 3px solid #dd6b20;
         }
 
         .condition-title {
-            font-size: 9px;
+            font-size: 11px;
             font-weight: bold;
             color: #dd6b20;
             text-transform: uppercase;
-            letter-spacing: 0.10em;
+            letter-spacing: 0.12em;
         }
 
         .condition-body {
-            font-size: 10px;
+            font-size: 12px;
             color: #4a5568;
             line-height: 1.4;
         }
 
         .next-review {
-            font-size: 9px;
+            font-size: 10px;
             color: #a0aec0;
             margin-top: 4px;
         }
@@ -289,12 +284,6 @@
             overflow: hidden;
         }
 
-        /* .status-bar td {
-             width: 50%; 
-            padding: 9px 18px;
-            border-right: 1.5px solid #1e9de3;
-        } */
-
         .status-bar td:first-child {
             width: 30%;
             padding: 11px 16px;
@@ -310,10 +299,9 @@
         }
 
         .status-label {
-            font-size: 10px;
+            font-size: 12px;
             font-weight: bold;
             color: #1a1a2e;
-            display: block;
             margin-bottom: 5px;
             letter-spacing: 0.01em;
         }
@@ -324,17 +312,18 @@
             color: #1580c0;
             padding: 4px 20px;
             border-radius: 20px;
-            font-size: 9px;
+            font-size: 11px;
             font-weight: bold;
             letter-spacing: 0.06em;
             border: 1px solid #c5e4f7;
+            margin-left: 5px;
         }
 
         /* === Factors table === */
         .factors-card {
             border: 1px solid #e2eaf3;
             border-radius: 12px;
-            margin: 22px 0 18px;
+            margin: 18px 0 18px;
             overflow: hidden;
             box-shadow: 0 3px 12px rgba(30, 157, 227, 0.10), 0 0 0 1px rgba(30, 157, 227, 0.06);
         }
@@ -347,21 +336,21 @@
         .factors-head td {
             padding: 11px 18px;
             font-weight: bold;
-            font-size: 10px;
+            font-size: 12px;
             color: #1e9de3;
             text-transform: uppercase;
             letter-spacing: 0.09em;
         }
 
         .factor-row td {
-            padding: 10px 16px;
+            padding: 12px 16px;
             border-top: 1px solid #e2eaf3;
-            font-size: 10px;
+            font-size: 12px;
         }
 
         /* Add this to gave (1,3,5) lined colored. */
 
-        .factor-row:nth-child(even) td {
+        tr:nth-child(even) td {
             background: #f0f8fe;
         }
 
@@ -369,11 +358,6 @@
         .factor-row .col-name {
             font-weight: bold;
             color: #1a1a2e;
-        }
-
-        .col-name {
-            width: 30%;
-            padding-left: 18px;
         }
 
         .col-weight {
@@ -385,7 +369,6 @@
         .col-attr {
             width: 22%;
             font-weight: bold;
-            color: #1e9de3;
         }
 
         .col-arrow {
@@ -404,22 +387,13 @@
 
         .bullet {
             display: inline-block;
-            width: 6px;
-            height: 6px;
-            background: #1e9de3;
+            width: 5px;
+            height: 5px;
+            background-color: rgb(61, 61, 61);
             border-radius: 50%;
             margin-right: 8px;
             vertical-align: middle;
             transform: translateY(1px);
-        }
-
-        /* === Shared inline arrows ===
-       Right arrow is rendered via inline SVG (see risk-report.html) for reliable
-       rendering — openhtmltopdf's CSS-triangle + inline-block line approach was
-       producing flag-like glyphs. SVG renders cleanly via openhtmltopdf-svg-support. */
-        .arrow-right {
-            display: inline-block;
-            vertical-align: middle;
         }
 
         .score-pill {
@@ -427,7 +401,7 @@
             border: 1.5px solid #c5e4f7;
             border-radius: 20px;
             padding: 2px 12px;
-            font-size: 9px;
+            font-size: 12px;
             font-weight: bold;
             color: #1580c0;
             text-align: center;
@@ -438,7 +412,7 @@
         .factor-total td {
             background: #e8f4fd;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 12.5px;
             color: #1a1a2e;
             padding: 11px 16px;
             border-top: 2px solid #c5e4f7;
@@ -461,12 +435,12 @@
         .kyc-banner {
             background: #ffffff;
             border: 1.5px solid #1e9de3;
-            border-radius: 8px 8px 0 0;
-            padding: 9px 18px;
+            border-radius: 8px;
+            padding: 10px 18px;
             margin-top: 12px;
-            margin-bottom: 0;
+            margin-bottom: 12px;
             font-weight: bold;
-            font-size: 10px;
+            font-size: 12px;
             color: #1e9de3;
             text-transform: uppercase;
             letter-spacing: 0.09em;
@@ -475,7 +449,7 @@
         .kyc-full {
             border: 1px solid #e2eaf3;
             border-radius: 8px;
-            padding: 10px 16px;
+            padding: 12px 16px;
             margin-bottom: 7px;
             background: #ffffff;
             box-shadow: 0 1px 4px rgba(30, 157, 227, 0.07), 0 0 0 1px rgba(30, 157, 227, 0.05);
@@ -490,8 +464,7 @@
 
         .kyc-cell {
             border: 1px solid #e2eaf3;
-            border-top: 3px solid #1e9de3;
-            padding: 10px 13px;
+            padding: 12px 13px;
             width: 33.33%;
             vertical-align: top;
             background: #ffffff;
@@ -518,7 +491,7 @@
 
         .kyc-section-title {
             font-weight: bold;
-            font-size: 10px;
+            font-size: 12px;
             color: #1580c0;
             margin-bottom: 6px;
             text-transform: uppercase;
@@ -531,12 +504,12 @@
 
         .section-icon {
             display: inline-block;
-            width: 8px;
-            height: 8px;
-            border: 1.5px solid #c5e4f7;
+            width: 9px;
+            height: 9px;
+            border: 2px dashed #c5e4f7;
             margin-right: 6px;
             vertical-align: middle;
-            border-radius: 2px;
+            border-radius: 5px;
         }
 
         .kyc-section-title.alert .section-icon {
@@ -544,7 +517,7 @@
         }
 
         .kyc-field {
-            font-size: 9.5px;
+            font-size: 11px;
             margin-bottom: 3px;
             line-height: 1.5;
         }
@@ -567,8 +540,8 @@
             background: #e8f4fd;
             border: 1px solid #c5e4f7;
             border-radius: 8px;
-            padding: 9px 16px;
-            margin: 10px 0;
+            padding: 10px 16px;
+            margin: 12px 0;
             border-left: 3px solid #1e9de3;
         }
 
@@ -585,41 +558,29 @@
 
         /* === Case history === */
         .case-banner-title {
+            display: table;
+            width: 96%;
             font-weight: bold;
             font-size: 13px;
             color: #1a1a2e;
             border-bottom: 1px solid #e2eaf3;
-            padding-bottom: 9px;
-            margin-bottom: 11px;
-            display: flex;
+            padding-bottom: 15px;
+            margin: -20px 0 15px 25px;
             align-items: center;
-            gap: 9px;
+            gap: 10px;
             line-height: 1;
         }
 
-        .case-banner-title {
-            font-weight: bold;
-            font-size: 13px;
-            color: #1a1a2e;
-            border-bottom: 1px solid #e2eaf3;
-            padding-bottom: 9px;
-            margin-bottom: 11px;
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            line-height: 1;
-        }
-
-        .case-banner-title img {
+        .case_history_img {
             width: 16px;
             height: 16px;
-            vertical-align: middle;
+            display: inline-block;
         }
 
         .case-entry {
             border: 1px solid #e2eaf3;
             border-radius: 8px;
-            padding: 10px 14px;
+            padding: 12px 14px;
             margin-bottom: 8px;
             background: #f0f8fe;
             border-left: 3px solid #1e9de3;
@@ -668,33 +629,19 @@
 
         .case-date {
             color: #1e9de3;
-            font-size: 10px;
+            font-size: 12px;
             font-weight: bold;
         }
 
         .case-action {
-            font-size: 10px;
+            font-size: 12px;
             color: #718096;
             margin-top: 2px;
         }
 
-        /* .inner-table {
-            width: 80%;
-            border: 1px solid #dcdcdc;
-        }
-
-        .inner-table td {
-            padding: 18px;
-            border-right: hidden;
-        }
-
-        .case-info.inner-table {
-            border-right: hidden;
-        } */
-
         .stage-label {
             color: #a0aec0;
-            font-size: 9px;
+            font-size: 10px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.06em;
@@ -703,7 +650,7 @@
         .stage-pill {
             display: inline-block;
             padding: 3px 14px;
-            font-size: 9px;
+            font-size: 11px;
             font-weight: bold;
             border-radius: 20px;
             letter-spacing: 0.04em;
@@ -747,11 +694,6 @@
 
         /* Keep the KYC Factors banner attached to the section that follows it */
         .kyc-banner {
-            page-break-after: avoid;
-        }
-
-        /* Keep the case-history title attached to its first entry */
-        .case-banner-title {
             page-break-after: avoid;
         }
 
@@ -866,9 +808,7 @@
                     <td class="col-weight">10%</td>
                     <td class="col-attr">Age</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">36 Years</td>
                     <td class="col-score"><span class="score-pill">0.5</span></td>
@@ -881,9 +821,7 @@
                     <td class="col-weight">10%</td>
                     <td class="col-attr">Constitution Type</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">Individual</td>
                     <td class="col-score"><span class="score-pill">0.1</span></td>
@@ -896,9 +834,7 @@
                     <td class="col-weight">10%</td>
                     <td class="col-attr">Income Range</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">1 - 5 lacs</td>
                     <td class="col-score"><span class="score-pill">0.1</span></td>
@@ -911,9 +847,7 @@
                     <td class="col-weight">10%</td>
                     <td class="col-attr">Permanent Address State</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">Maharashtra</td>
                     <td class="col-score"><span class="score-pill">1.0</span></td>
@@ -926,9 +860,7 @@
                     <td class="col-weight">10%</td>
                     <td class="col-attr">Occupation-Income-Age</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">Business or Self employed + 1 - 5 lacs + 36 Years</td>
                     <td class="col-score"><span class="score-pill">0.1</span></td>
@@ -941,9 +873,7 @@
                     <td class="col-weight">30%</td>
                     <td class="col-attr">Nature Of Business</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">Gatekeeper service providers such as accountants, lawyers or other
                         professionals who hold customers money where the identity of the underlying customers is not
@@ -958,9 +888,7 @@
                     <td class="col-weight">10%</td>
                     <td class="col-attr">Products</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">Loan</td>
                     <td class="col-score"><span class="score-pill">0.5</span></td>
@@ -973,9 +901,7 @@
                     <td class="col-weight">10%</td>
                     <td class="col-attr">Channel</td>
                     <td class="col-arrow">
-                        <img class="arrow_right_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADRSURBVHgB7ZRBDoIwEEWn9SIchS3hELonJNzAcgIXwNpbtFu9WOtMogQTKXXxqwveAgpt8l/SzCfa+TGKAIzjeOFXp5QyTdP0sbOaMHTyCCGYaZrOlFuAg/vFOipxIADOuVtVVXwDqnz+Kuu6JmvtnXIIfCMBE0iVgAqkSMAFtiQgPbDGMAyGJeaJkJ54E+BxOXnvCwKitT7yaBazxDKcN66UGVQTJvM/V5ADqWSp5te3VHY2gU/hbduaLAJr4bKGC8TC4QJb4VCBlHCYQGq48AA3V6JWMCNO5gAAAABJRU5ErkJggg=="
-                            alt="arrow_right_img" />
+                        <span class="arrow_right_img">➜</span>
                     </td>
                     <td class="col-value">Direct</td>
                     <td class="col-score"><span class="score-pill">0.1</span></td>
@@ -1157,7 +1083,7 @@
 
     <!-- ============================ CASE HISTORY ============================ -->
 
-    <div class="case-banner">
+    <div>
         <img class="case_history_img"
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARbSURBVHgBzVhNTiNHFH6v3AaUiRRnl4yR0pwgzhJmojEnGDgBcAKMMFF2NrsoeITnBNgnAE5gW0lsKRuYE+BIeJRlZ0EkaHe9vFfV7TGOf7oHxswnS13urp+vXr3fQkgIt9Bx+2l6TRpzpHReEWUIMCPfENT6dWW16RYamX56ccvxb8+71fVukvmduB2zB39sA+GWDzoPJKuT/LiJ/+sbpFJ5Iqr6zkJ1udgxJCEmZhLiCfOE+oRXdsEwEUmAR6TOUNElAf2DpLvy/rryoilPrVIsMbTvjiwZlprrLyy96v26Wp+2Hk76IGL3ncUSkyhE75jOuQJdva782IQYYKnmekcvLsP2ld0UVnuVtb1JY5wJZFwW9ylTyIWvWky98D6cPC4iMmZzJBIjF1mi08bgWDLphYbdjYD2epWXVXgEiB4yyVq0jjxHlR5HyGSYzIWQET1hbdicdTzZgz9zaf/GS2JNQ5v2br68W/fK6170TQ13NDoTSkYT7swiY3ZJ/oWZPAH6juOG6+Se/bv0evjbgJAx61CBWTqH79+sncWaWDA43niwG6U9ow4jVjes1KXw2WLzLcMnxiS9NISs07O7DBy1DXOE8XNAJVBYE2lZCRHshs/a37+sdmGOIAq2ATEP2vytq9D8jL9BVHWYMxCpZiya6F2m3Mg4bCFhbMJu5ObnidCSv47+K9RozI6D4Tv4DOAQkisNBGzCE+H5fnsDFB2Ll1YYWhcp6MITgbOGjOFBkGEJgUmulEYPnghp/67pp5Zq0o6doH1KhHFwR9pyZEYynIS58ABE0fuhcLQCj0llmFEm4Vhw+srzQxlz/nSVLbar6f7t26R5dLb4O8dQPCbEMzH7lnlL+D0kRLfKCRiyqNGmqxKcJfJnf+psJZiGc3P1yg4nVIDaZoGoN+AjIAlX72htBUEfGmJiLVrXJGWVOBVnDlJ0yGTqLJQafvNzx0319ZXhFJYx8JEwc/lBmYl9kBDHx3Rwdxj3GJUNptYpEulEoh6FzNV783KbM4aVaE7e5TYnfieTxkimMWwQNkFDqkeDH8NaDLHK2rrRLxOS9Pm4fjbjhBMxiOh48QPTNpcpEkawaSabAyLrEt0TPZR3gxQWKdixLcp/W2wXYA6QrFGOlzQM6rR7Vcfy/m9VNrxd++FhCj4NYTXs9cbUefeqDifol/lhOhHo07hmmwTZffFRwSkvcGHbUwixaXosws3Q0fGthm48L3ZK8EhYPmjvsr+rmdsSXiNIQ2u0z9ja3viTgBpWycWJ49mCf7uXNCREyB40ckCLx6Kf4bKXgYOb4/L3qZcN/ZRTjnTKgJ2c5N1xdWtQUQyImBXf3jz7ouyVfxib7iDMgC0gsRRJKxzVZbFf8nk3tYa/FOIgY+DM8yu5zEIMNqKLLDsGu2LJs6rhmYTuEdNc2WLiINwCpU5m3QslJhRB9MsJSAqDPGm9gojfcdESXumBp80FVqohl1mOj3yll6zO+w+bMhjGGkgTGgAAAABJRU5ErkJggg=="
             alt="case_history_img" />
@@ -1169,16 +1095,18 @@
             <table>
                 <tr>
                     <!-- Arrow Column -->
-                    <td class="arrow-col no-border">
-                        <img class="arrow_upper_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE8SURBVHgB7dg9bsJAEIbhGQe7Tp/GuUHaKJVvkiOkyR2QaDgCN4Ab+Apwg6VAoqTmR4vWYjDiR+zaM0wzbwXCeL9HQgIBYFm9QhDq47/+Aiim4XG+21ZuXDkQSAQQxqPPaw/4fjrFSSHYATfj25NEEKyAh+Pb09gRbICn49sTWREZMHT7mUcHHib0OiLO0MOmeeKh3OVFXf7VJTDUG3Bv/OENK0RYni/yfuEzqCQQvQCPxq+H3+762tXoZy6B6AxIGU9JIDoBuoynuBHJgD7jKU5EEoBjPMWFiAaEG3ONpzgQ0YD9oPjlHE/dQ4SzYt+fAMgmzRcU43iKEHT/5qzIBrEXngZ/glAB0eX+LD8lNDOAdgbQzgDaGUA7A2hnAO0MoJ0BtDOAdgbQzgDaGUA7McDlX5EpfxVa1os7Am4x6LHCV8+BAAAAAElFTkSuQmCC"
-                            alt="arrow_upper_img" />
+                    <td class="no-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+                        </svg>
                     </td>
                     <!-- Main Content -->
-                    <td class="content-wrapper" colspan="4">
-                        <table class="inner-table">
+                    <td colspan="4">
+                        <table>
                             <tr>
-                                <td class="case-info inner-table">
+                                <td class="case-info">
                                     <div class="case-date">Friday, 10 April 2026 at 05:06 PM</div>
                                     <div class="case-action">Case Assigned To sagark (Self)</div>
                                 </td>
@@ -1188,9 +1116,7 @@
                                 </td>
 
                                 <td class="case-stage-arrow-col">
-                                    <img class="arrow_right_ch_img"
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFRSURBVHgB7dgxUoNQEAbgfxWo7dPgCUxryQ30BjmCTWrHztIjeAOPQOU9KC2tE3R9+zAKscl7z5ndYr8mEDYz/z9AeAPgnHPOOT0EJe1d345Vs6nG3fPw1A3IdAYl+7rpGbiXTymDTGoFfk4+oy0poViAb4nxPm3ml1C7B8Rq+7qmT/RMuMCUZqj3uy7lnlAtIEpLqBcQJSVMFBC5JcwUEDklTBUQqSXMFRApJUwWEKeWWBQ4rE9gBdEVM9/87v8tUc3n5WkoT0VYwXy0Pz2xw9bl4aujpYTZK2pmmXFxBj7OqatG3sAKQriEMLuEaJCMyxGjVtt+TVyHJTd938RT+LfH62E+Z/Rv9LTw8RCMSQkfD8OQ1PBxBEbkhI9jMCA3fByFspLwcRyKSsPHn0DJf4QXFdQ0L2GlUxRe6L8XKggv1ApI6FDhoSS8c84557R9AV+46GQe1r0fAAAAAElFTkSuQmCC"
-                                        alt="arrow_right_ch_img" />
+                                    <span class="arrow_right_ch_img">➜</span>
                                 </td>
 
                                 <td class="case-stage-pill-col">
@@ -1206,16 +1132,18 @@
             <table>
                 <tr>
                     <!-- Arrow Column -->
-                    <td class="arrow-col no-border">
-                        <img class="arrow_upper_img"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE8SURBVHgB7dg9bsJAEIbhGQe7Tp/GuUHaKJVvkiOkyR2QaDgCN4Ab+Apwg6VAoqTmR4vWYjDiR+zaM0wzbwXCeL9HQgIBYFm9QhDq47/+Aiim4XG+21ZuXDkQSAQQxqPPaw/4fjrFSSHYATfj25NEEKyAh+Pb09gRbICn49sTWREZMHT7mUcHHib0OiLO0MOmeeKh3OVFXf7VJTDUG3Bv/OENK0RYni/yfuEzqCQQvQCPxq+H3+762tXoZy6B6AxIGU9JIDoBuoynuBHJgD7jKU5EEoBjPMWFiAaEG3ONpzgQ0YD9oPjlHE/dQ4SzYt+fAMgmzRcU43iKEHT/5qzIBrEXngZ/glAB0eX+LD8lNDOAdgbQzgDaGUA7A2hnAO0MoJ0BtDOAdgbQzgDaGUA7McDlX5EpfxVa1os7Am4x6LHCV8+BAAAAAElFTkSuQmCC"
-                            alt="arrow_upper_img" />
+                    <td class="no-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+                        </svg>
                     </td>
                     <!-- Main Content -->
-                    <td class="content-wrapper" colspan="4">
-                        <table class="inner-table">
+                    <td colspan="4">
+                        <table>
                             <tr>
-                                <td class="case-info inner-table">
+                                <td class="case-info">
                                     <div class="case-date">Friday, 10 April 2026 at 04:36 PM</div>
                                     <div class="case-action">Case Created</div>
                                 </td>
@@ -1225,9 +1153,7 @@
                                 </td>
 
                                 <td class="case-stage-arrow-col">
-                                    <img class="arrow_right_ch_img"
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFRSURBVHgB7dgxUoNQEAbgfxWo7dPgCUxryQ30BjmCTWrHztIjeAOPQOU9KC2tE3R9+zAKscl7z5ndYr8mEDYz/z9AeAPgnHPOOT0EJe1d345Vs6nG3fPw1A3IdAYl+7rpGbiXTymDTGoFfk4+oy0poViAb4nxPm3ml1C7B8Rq+7qmT/RMuMCUZqj3uy7lnlAtIEpLqBcQJSVMFBC5JcwUEDklTBUQqSXMFRApJUwWEKeWWBQ4rE9gBdEVM9/87v8tUc3n5WkoT0VYwXy0Pz2xw9bl4aujpYTZK2pmmXFxBj7OqatG3sAKQriEMLuEaJCMyxGjVtt+TVyHJTd938RT+LfH62E+Z/Rv9LTw8RCMSQkfD8OQ1PBxBEbkhI9jMCA3fByFspLwcRyKSsPHn0DJf4QXFdQ0L2GlUxRe6L8XKggv1ApI6FDhoSS8c84557R9AV+46GQe1r0fAAAAAElFTkSuQmCC"
-                                        alt="arrow_right_ch_img" />
+                                    <span class="arrow_right_ch_img">➜</span>
                                 </td>
 
                                 <td class="case-stage-pill-col">
@@ -1244,9 +1170,11 @@
     <!-- ============================ FOOTER TRACKWIZZ IMAGE ============================ -->
 
     <div class="footer-logo-wrap">
+        <span class="footer-left">CONFIDENTIAL</span>
         <img class="footer-logo"
             src="data:image/png;base64,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"
             alt="TRACKWIZZ" />
+        <span class="page-number">1</span>
     </div>
 </body>
 
